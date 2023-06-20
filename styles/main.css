@@ -1,0 +1,21 @@
+body {
+  padding: 48px;
+  background-color: #333;
+  color: #fe4;
+}
+
+h1 {
+  font-size: 60pt;
+}
+
+h2 {
+  font-size: 36pt;
+}
+
+h3 {
+  font-size: 24pt;
+}
+
+p {
+  font-size: 18pt;
+}
