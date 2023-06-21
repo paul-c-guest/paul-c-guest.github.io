@@ -44,7 +44,8 @@ p {
 
 .blog {
   border-style: solid;
-  border-width: 4pt;
+  border-width: 3pt 0 0 3pt;
+  border-color: var(--grey-highlight);
   border-radius: 5pt;
   padding: 0px 36px 18px;
   margin: 36px 0px;
