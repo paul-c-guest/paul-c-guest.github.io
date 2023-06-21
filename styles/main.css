@@ -17,17 +17,18 @@ body {
 
 h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 60pt;
+  font-size: 48pt;
   margin-bottom: 0px;
 }
 
 #site-masthead {
+  font-size: 60pt;
   text-align: center;
 }
 
 h2 {
   font-family: 'Rubik', sans-serif;
-  font-size: 30pt;
+  font-size: 26pt;
 }
 
 h3 {
@@ -65,14 +66,18 @@ a:hover {
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 48pt;
+    font-size: 36pt;
   }
 
   h2 {
-    font-size: 24pt;
+    font-size: 18pt;
   }
 
   h3 {
-    font-size: 18pt;
+    font-size: 14pt;
+  }
+
+  p {
+    font-size: 12pt;
   }
 }
