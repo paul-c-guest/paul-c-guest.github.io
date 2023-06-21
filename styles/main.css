@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 :root {
   --yellow: #fe5;
   --yellow-highlight: #fe7;
@@ -6,27 +9,32 @@
 }
 
 body {
+  font-family: 'Libre Baskerville', sans-serif;
   padding: 4vw 6vw 7vw 5vw;
   background-color: var(--grey-base);
   color: var(--yellow);
 }
 
 h1 {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
   font-size: 60pt;
   margin-bottom: 0px;
 }
 
 h2 {
+  font-family: 'Rubik', sans-serif;
   font-size: 30pt;
 }
 
 h3 {
+  text-align: center;
   margin-top: 0px;
   font-size: 22pt;
 }
 
 p {
-  font-size: 16pt;
+  font-size: 14pt;
 }
 
 .blog {
@@ -55,8 +63,13 @@ a:hover {
 @media (max-width: 500px) {
   h1 {
     font-size: 48pt;
-  }  
+  }
+
+  h2 {
+    font-size: 24pt;
+  }
+
   h3 {
     font-size: 18pt;
-  }  
-}  
+  }
+}
