@@ -74,10 +74,16 @@ a:hover {
   }
 
   h3 {
-    font-size: 14pt;
+    font-size: 16pt;
   }
 
   p {
     font-size: 12pt;
   }
+
+  #site-masthead {
+    font-size: 44pt;
+    text-align: center;
+  }
+    
 }
