@@ -95,6 +95,14 @@ a:hover {
 }
 
 @media (max-width: 500px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .header-logo {
+    left: 5vw;
+  }
+
   body {
     min-width: 0;
     padding: 4vh 6vw 7vh 5vw;
