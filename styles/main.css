@@ -9,8 +9,9 @@
 }
 
 body {
+  min-width: 400px;
   font-family: 'Libre Baskerville', sans-serif;
-  padding: 4vh 6vw 7vh 5vw;
+  padding: 4vh 12vw 7vh 10vw;
   background-color: var(--grey-base);
   color: var(--yellow);
 }
@@ -65,6 +66,11 @@ a:hover {
 }
 
 @media (max-width: 500px) {
+  body {
+    min-width: 0;
+    padding: 4vh 6vw 7vh 5vw;
+  }
+
   h1 {
     font-size: 36pt;
   }
@@ -83,7 +89,5 @@ a:hover {
 
   #site-masthead {
     font-size: 44pt;
-    text-align: center;
   }
-    
 }
