@@ -12,17 +12,17 @@ body {
 }
 
 h1 {
-  font-size: 72pt;
+  font-size: 60pt;
   margin-bottom: 0px;
 }
 
 h2 {
-  font-size: 32pt;
+  font-size: 30pt;
 }
 
 h3 {
   margin-top: 0px;
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 p {
@@ -51,3 +51,12 @@ a:visited {
 a:hover {
   color: var(--yellow-highlight);
 }
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 48pt;
+  }  
+  h3 {
+    font-size: 18pt;
+  }  
+}  
