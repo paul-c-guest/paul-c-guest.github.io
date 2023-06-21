@@ -6,7 +6,7 @@
   --yellow-highlight: #fe7;
   --grey-base: #333;
   --grey-highlight: #555;
-  --header-height: 84px;
+  --header-height: 72px;
 }
 
 body {
@@ -54,6 +54,16 @@ p {
   position: fixed;
   top: 0px;
   left: 0px;
+}
+
+.header-logo {
+  position: fixed;
+  margin-top: 16px;
+  left: 11vw;
+  border-color: #333;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: #333;
 }
 
 .blog {
