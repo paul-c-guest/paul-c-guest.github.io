@@ -1,7 +1,14 @@
+html {
+  --yellow: #fe5;
+  --yellow-highlight: #fe7;
+  --grey-base: #333;
+  --grey-highlight: #555;
+}
+
 body {
   padding: 4vw 6vw 5vw 5vw;
-  background-color: #333;
-  color: #fe4;
+  background-color: var(--grey-base);
+  color: var(--yellow);
 }
 
 h1 {
@@ -30,5 +37,15 @@ p {
 }
 
 .blog:hover {
-  background-color: #444;
+  color: var(--yellow);
+  background-color: var(--grey-highlight);
+}
+
+a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--yellow-highlight);
 }
