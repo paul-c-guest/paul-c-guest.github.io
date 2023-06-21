@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Libre Baskerville', sans-serif;
-  padding: 4vw 6vw 7vw 5vw;
+  padding: 4vh 6vw 7vh 5vw;
   background-color: var(--grey-base);
   color: var(--yellow);
 }
