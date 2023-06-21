@@ -17,9 +17,12 @@ body {
 
 h1 {
   font-family: 'Rubik', sans-serif;
-  text-align: center;
   font-size: 60pt;
   margin-bottom: 0px;
+}
+
+#site-masthead {
+  text-align: center;
 }
 
 h2 {
