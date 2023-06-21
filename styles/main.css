@@ -6,11 +6,13 @@
   --yellow-highlight: #fe7;
   --grey-base: #333;
   --grey-highlight: #555;
+  --header-height: 84px;
 }
 
 body {
   min-width: 400px;
   font-family: 'Libre Baskerville', sans-serif;
+  margin-top: var(--header-height);
   padding: 4vh 12vw 7vh 10vw;
   background-color: var(--grey-base);
   color: var(--yellow);
@@ -40,6 +42,18 @@ h3 {
 
 p {
   font-size: 14pt;
+}
+
+.header {
+  width: 100vw;
+  height: var(--header-height);
+  background-color: #555;
+  border-width: 0 0 2px 0;
+  border-color: #fe7;
+  border-style: solid;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 .blog {
