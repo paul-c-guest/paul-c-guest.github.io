@@ -55,6 +55,10 @@ p {
   background-color: var(--grey-highlight);
 }
 
+.date {
+  text-align: right;
+}
+
 a,
 a:visited {
   color: var(--yellow);
