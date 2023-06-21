@@ -41,7 +41,8 @@ p {
   background-color: var(--grey-highlight);
 }
 
-a {
+a,
+a:visited {
   color: var(--yellow);
   text-decoration: none;
 }
