@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  padding: 4vw 6vw 5vw 5vw;
+  padding: 4vw 6vw 7vw 5vw;
   background-color: var(--grey-base);
   color: var(--yellow);
 }
@@ -34,6 +34,7 @@ p {
   border-width: 4pt;
   border-radius: 5pt;
   padding: 0px 36px 18px;
+  margin: 36px 0px;
 }
 
 .blog:hover {
