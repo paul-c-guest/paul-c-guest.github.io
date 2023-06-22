@@ -16,10 +16,11 @@ img {
 }
 
 body {
-  min-width: 400px;
+  /* min-width: 400px; */
   font-family: 'Libre Baskerville', sans-serif;
   margin-top: var(--header-height);
-  padding: 4vh 12vw 7vh 10vw;
+  padding: 3vh 22vw 7vh 20vw;
+  /* max-width: 61%; */
   background-color: var(--grey-base);
   color: var(--yellow);
 }
@@ -41,9 +42,14 @@ h2 {
 }
 
 h3 {
+  /* text-align: center; */
+  margin-top: 1rem;
+  font-size: 22pt;
+}
+
+.site-masthead-h3 {
   text-align: center;
   margin-top: 0px;
-  font-size: 22pt;
 }
 
 p li {
@@ -65,7 +71,7 @@ p li {
 .header-logo {
   position: fixed;
   margin-top: 16px;
-  left: 11vw;
+  left: 20vw;
   border-color: #333;
   border-style: solid;
   border-radius: 50%;
@@ -100,7 +106,7 @@ a:hover {
   color: var(--yellow-highlight);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   :root {
     --header-height: 60px;
   }
@@ -112,6 +118,7 @@ a:hover {
   body {
     min-width: 0;
     padding: 4vh 6vw 7vh 5vw;
+    max-width: none;
   }
 
   h1 {
