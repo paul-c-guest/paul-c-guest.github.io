@@ -91,9 +91,9 @@
     </p>
     <p>
       Individualism, in this case the use of 'id', lets the developer make
-      chosen elements special. As well as now being freed from their class
-      restrictions telling them to be a certain way, now they can be called up
-      by their unique name, and wear that incredible one-of-a-kind shirt.
+      chosen elements special. Now freed from their dull class restrictions,
+      they can be called up by their unique name, and wear that incredible
+      one-of-a-kind shirt.
     </p>
     <h2>Proceed with Care</h2>
     <p>
@@ -107,6 +107,29 @@
       why. When we call up that id, hoping it's a unique element on our page,
       which one do we get..?
     </p>
+    <h2>Combinations</h2>
+    <p>
+      Have a look at the CSS below, and consider the results of applying
+      different combinations of it to some HTML elements. Ids start with a hash
+      and classes start with a dot:
+    </p>
+    <img src="../images/marx-css.png" />
+    <p>We could assign a single class to an element without issue.</p>
+    <img src="../images/worker.png" />
+    <p>
+      We can choose both classes, and remember &mdash; this is common. Now,
+      since the elite class declaration comes last in the CSS file, it will
+      override any similar values that were set previously. In this case none of
+      the worker attributes will remain.
+    </p>
+    <img src="../images/double-agent.png" />
+    <p>
+      So what would happen if we give our element the karl-marx id? Despite
+      Karl's attempts to side with the workers, the attributes that come with
+      his id will not be overridden by conflicting class values.
+    </p>
+    <img src="../images/karl-marx-id.png" />
+
     <h2>Final Thoughts</h2>
     <p>
       I hope I've helped to make class and id in HTML and CSS less fuzzy. I also
