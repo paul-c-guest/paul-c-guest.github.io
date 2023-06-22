@@ -16,11 +16,9 @@ img {
 }
 
 body {
-  /* min-width: 400px; */
   font-family: 'Libre Baskerville', sans-serif;
   margin-top: var(--header-height);
   padding: 3vh 22vw 7vh 20vw;
-  /* max-width: 61%; */
   background-color: var(--grey-base);
   color: var(--yellow);
 }
@@ -28,6 +26,7 @@ body {
 h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 48pt;
+  line-height: 105%;
   margin-bottom: 0px;
 }
 
@@ -42,9 +41,9 @@ h2 {
 }
 
 h3 {
-  /* text-align: center; */
   margin-top: 1rem;
   font-size: 22pt;
+  line-height: 140%;
 }
 
 .site-masthead-h3 {
@@ -52,15 +51,16 @@ h3 {
   margin-top: 0px;
 }
 
-p li {
-  font-size: 14pt;
+p, li {
+  line-height: 150%;
+  font-size: 13pt;
 }
 
 .code-block {
   background: #202020;
   border-radius: 0.25em;
   overflow: auto;
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   width: auto;
   max-width: 40em;
   padding: 0.6em 0.5em;
@@ -69,7 +69,7 @@ p li {
 
 .preformatted-code-block {
   margin: 0;
-  line-height: 125%;
+  line-height: 135%;
 }
 
 .header {
@@ -154,8 +154,8 @@ a:hover {
     font-size: 16pt;
   }
 
-  p li {
-    font-size: 12pt;
+  p, li {
+    font-size: 11pt;
   }
 
   #site-masthead {
