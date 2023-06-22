@@ -9,6 +9,12 @@
   --header-height: 72px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
 body {
   min-width: 400px;
   font-family: 'Libre Baskerville', sans-serif;
