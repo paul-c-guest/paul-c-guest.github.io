@@ -6,6 +6,7 @@
   --yellow-highlight: #fe7;
   --grey-base: #333;
   --grey-highlight: #555;
+  --off-white: #ddd;
   --header-height: 72px;
 }
 
@@ -54,6 +55,18 @@ h3 {
 p, li {
   line-height: 150%;
   font-size: 13pt;
+}
+
+.question {
+  font-style: italic;
+  color: var(--off-white);
+  padding: 0 5em 0 1.5em;
+  margin-top: 3em;
+  min-height: 2em;
+  border-style: solid;
+  border-color: var(--grey-highlight);
+  border-width: 0 0 0 .5em;
+  
 }
 
 .code-block {
