@@ -8,6 +8,7 @@
   --grey-highlight: #555;
   --off-white: #ddd;
   --header-height: 72px;
+  --icon-size: 46px;
 }
 
 img {
@@ -52,7 +53,8 @@ h3 {
   margin-top: 0px;
 }
 
-p, li {
+p,
+li {
   line-height: 150%;
   font-size: 13pt;
 }
@@ -65,8 +67,7 @@ p, li {
   min-height: 2em;
   border-style: solid;
   border-color: var(--grey-highlight);
-  border-width: 0 0 0 .5em;
-  
+  border-width: 0 0 0 0.5em;
 }
 
 .code-block {
@@ -105,6 +106,19 @@ p, li {
   border-style: solid;
   border-radius: 50%;
   background-color: #333;
+}
+
+.icon {
+  position: fixed;
+  right: 23vw;
+  margin-top: 16px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 50%;
+  border-style: solid;
+  background-image: url(../images/p-g-bulb.jpeg);
+  background-size: var(--icon-size);
+  border-width: 0;
 }
 
 .blog {
@@ -146,7 +160,6 @@ a:hover {
 
   .code-block {
     font-size: 10pt;
-
   }
 
   body {
@@ -167,11 +180,18 @@ a:hover {
     font-size: 16pt;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 11pt;
   }
 
   #site-masthead {
     font-size: 44pt;
+  }
+
+  .icon {
+    right: 7vw;
+    margin-top: 14px;
+    --icon-size: 35px;
   }
 }
