@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 :root {
-  --yellow: #fe5;
-  --yellow-highlight: #fe7;
+  --yellow: rgb(242, 229, 108);
+  --yellow-highlight: rgb(235, 226, 157);
+  --pink: rgb(219, 176, 205);
+  --cyan: rgb(204, 214, 236);
   --grey-base: #333;
   --grey-highlight: #555;
   --off-white: #ddd;
@@ -61,12 +63,12 @@ li {
 
 .question {
   font-style: italic;
-  color: var(--off-white);
+  color: var(--cyan);
   padding: 0 5em 0 1.5em;
   margin-top: 3em;
   min-height: 2em;
   border-style: solid;
-  border-color: var(--grey-highlight);
+  border-color: var(--pink);
   border-width: 0 0 0 0.5em;
 }
 
@@ -89,9 +91,9 @@ li {
 .header {
   width: 100vw;
   height: var(--header-height);
-  background-color: #555;
+  background-color: var(--grey-highlight);
   border-width: 0 0 2px 0;
-  border-color: #fe7;
+  border-color: var(--cyan);
   border-style: solid;
   position: fixed;
   top: 0px;
@@ -102,10 +104,10 @@ li {
   position: fixed;
   margin-top: 16px;
   left: 20vw;
-  border-color: #333;
+  border-color: var(--grey-base);
   border-style: solid;
   border-radius: 50%;
-  background-color: #333;
+  background-color: var(--grey-base);
 }
 
 .icon {
