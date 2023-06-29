@@ -206,18 +206,74 @@ So now we've got a program that keeps track of the step count, incrementing the 
 }</pre></div>
 <p>Note that in a switch we need to explicitly tell the flow where to <code>break</code> free. If we didn't include that command, the flow would continue through the rest of the 'cases' and could run through more code than we intended. We can use this feature to our advantage, like in the section for the cases of 9 or 15.</p>
 
-    <h2>The Doument Object Model</h2>
+<h2>Why are there empty brackets everywhere?</h2>
+<p>
+  The next concept to cover is functions. Let's revisit that piece of pseudo-code from earlier:
+</p>
+
+<div class="code-block">
+  <pre class="preformatted-code-block">while nothing is in the way
+{ left foot, right foot }</pre>
+</div>
+
+<p>Those two instructions in the brackets are a good candidate to make into a function, since it is a repetitive set of instructions that we are likely to use all over our code. So, rather than writing out every instruction in every place we need it, we can do this:</p>
+
+<div class="code-block">
+  <pre class="preformatted-code-block">function "takeTwoSteps" = {
+  left foot forward
+  right foot forward
+}
+
+while nothing is in the way { 
+  takeTwoSteps
+}</pre>
+</div>
+
+<p>This move might seem simple, or not even necessary. However if we want to make our walk instructions more complex, we just need to change it in one place. We'll also start getting away from the pseudo-code here:</p>
+
+<div class="code-block">
+  <pre class="preformatted-code-block">function takeTwoSteps() {
+  leftFootUp
+  leftFootForward
+  leftFootDown
+  rightFootUp
+  rightFootForward
+  rightFootDown
+}
+
+while (clearPathAhead) { 
+  takeTwoSteps()
+}</pre>
+</div>
+
+<p>OK but we still haven't talked about all these empty brackets! A function can be given extra information to assist or modify the results. When required, those bits of information go in the brackets. Let's add a parameter to tell the walker which direction to go.</p>
+
+<div class="code-block">
+  <pre class="preformatted-code-block">function takeTwoSteps(direction) {
+  turnTowards(direction)
+  leftFootUp()
+  leftFootForward()
+  leftFootDown()
+  rightFootUp()
+  rightFootForward()
+  rightFootDown()
+}
+
+while (clearPathAhead) { 
+  takeTwoSteps(north)
+}</pre>
+</div>
+
+<p>A few things have changed, so make sure you've noticed what's been added this time. Our function now accepts a <code>direction</code>, and in our loop we specify an actual direction, <code>north</code>. There's an extra line at the start of the instructions to orientate the walker before setting off.</p>
+<p>Also note that we've added brackets to the end of each instruction. Yup, they are also functions! The first function <code>turnTowards()</code> takes the <code>direction</code> parameter so it knows which way to turn. Every function needs to be written by a programmer &mdash; however that won't always be you. A lot of programming involves accessing pieces of pre-written code, which bring along their own ready-made functions.</p>
+
+    <h2>The Document Object Model</h2>
     <p>
-      
-    </p>
+
+    </p>  
 
     <h2>how do i get at the info in arrays and objects?</h2>
     <p>oh jeez...</p>
-
-    <h2>wut? well whats a function</h2>
-    <p>
-      that cake recipe that you've nailed, and another example from the clock
-    </p>
 
     <h3>PG</h3>
   </body>
