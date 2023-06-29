@@ -61,6 +61,10 @@ li {
   font-size: 13pt;
 }
 
+li {
+  padding-bottom: 3pt;
+}
+
 .question {
   font-style: italic;
   color: var(--cyan);
