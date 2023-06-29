@@ -182,7 +182,7 @@ So now we've got a program that keeps track of the step count, incrementing the 
 </div>
 <p>The program will 'flow' through the conditions until it finds one that should be acted on. The program will only act on the code for the first condition it finds to be correct, and then break out from that entire flow.</p>
 
-<p>For certain situations, there is a completely different way to express a complex <code>if else</code> statement, called a <code>switch</code>. The format is quite different, but they really do the same thing underneath it all &mdash; and often the decision to use one or the other is down to the clarity of the resulting code, for the reader!</p>
+<p>For certain situations, there is a completely different way to express a complex <code>if else</code> statement, called a <code>switch</code>. The format is quite different, but they get the same result. Often the decision to use one or the other can be down to personal perference or the clarity of the resulting code.</p>
 
 <div class="code-block">
   <pre class="preformatted-code-block">switch (hour) {
@@ -204,10 +204,12 @@ So now we've got a program that keeps track of the step count, incrementing the 
     ringABell()
 
 }</pre></div>
-<p>Note that in a switch we need to explicitly tell the flow where to <code>break</code> free from the switch. If we didn't include that command, the flow would continue through the rest of the 'cases' and might perform more actions than we intended. We can use this feature to our advantage, like in the section for the cases of 9 or 15.</p>
+<p>Note that in a switch we need to explicitly tell the flow where to <code>break</code> free. If we didn't include that command, the flow would continue through the rest of the 'cases' and could run through more code than we intended. We can use this feature to our advantage, like in the section for the cases of 9 or 15.</p>
 
-    <h2>so whats the DOM</h2>
-    <p>mansplain why its useful</p>
+    <h2>The Doument Object Model</h2>
+    <p>
+      
+    </p>
 
     <h2>how do i get at the info in arrays and objects?</h2>
     <p>oh jeez...</p>
