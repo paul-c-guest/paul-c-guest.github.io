@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 :root {
-  --yellow: rgb(242, 229, 108);
-  --yellow-highlight: rgb(235, 226, 157);
+  --yellow: rgb(234, 220, 96);
+  --yellow-highlight: rgb(238, 230, 173);
   --pink: rgb(219, 176, 205);
   --cyan: rgb(204, 214, 236);
   --grey-base: #333;
@@ -97,29 +97,6 @@ code {
   line-height: 135%;
 }
 
-.header {
-  width: 100vw;
-  height: var(--header-height);
-  background-color: var(--grey-highlight);
-  border-width: 0 0 2px 0;
-  border-color: var(--cyan);
-  border-style: solid;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-}
-
-.header-logo {
-  position: fixed;
-  margin-top: 16px;
-  left: 20vw;
-  border-color: var(--grey-base);
-  border-style: solid;
-  border-radius: 50%;
-  background-color: var(--grey-base);
-}
-
 .icon {
   position: fixed;
   right: 23vw;
@@ -153,12 +130,53 @@ code {
 
 a,
 a:visited {
-  color: var(--yellow);
+  color: var(--yellow-highlight);
   text-decoration: none;
+  background-color: var(--grey-highlight);
 }
 
 a:hover {
-  color: var(--yellow-highlight);
+  background-color: var(--grey-base);
+  color: var(--cyan);
+}
+
+.blog a {
+  color: var(--yellow);
+}
+
+.header {
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--grey-highlight);
+  border-width: 0 0 2px 0;
+  border-color: var(--cyan);
+  border-style: solid;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.header-logo {
+  position: fixed;
+  margin-top: 16px;
+  left: 20vw;
+  border-color: var(--grey-base);
+  border-style: solid;
+  border-radius: 50%;
+  background-color: var(--grey-base);
+}
+
+.header-logo a {
+  padding: 0;
+  margin: 0;
+  color: var(--yellow);
+  /* transparent BG  */
+  background-color: #0000;
+}
+
+.header-logo a:hover {
+  color: var(--cyan);
 }
 
 @media (max-width: 580px) {
