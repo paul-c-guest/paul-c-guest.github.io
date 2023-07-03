@@ -66,6 +66,27 @@ li {
   padding-bottom: 3pt;
 }
 
+table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  table-layout: fixed;
+  width: 50%;
+  vertical-align: top;
+  padding: 0 2%;
+  /* borders for visual testing */
+  /* border-width: 1px;
+  border-color: #ddd;
+  border-style: solid; */
+}
+
+/* to centre an odd numbered final table cell */
+.hangingTableCell {
+  padding: 0 25%;
+}
+
 .question {
   font-style: italic;
   color: var(--cyan);
