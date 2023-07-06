@@ -1,0 +1,28 @@
+.confidence-flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  /* max-width: 100%; */
+}
+
+.col-1 {
+  min-width: 25%;
+}
+
+.col-2 {
+  width: 15%;
+}
+
+.col-3 {
+  min-width: 58%;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  /* padding: 0.3em; */
+  border-width: 2px;
+  border-color: aquamarine;
+  border-style: solid;
+}
