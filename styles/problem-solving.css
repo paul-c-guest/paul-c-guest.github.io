@@ -35,3 +35,23 @@ div {
 .col-header {
   margin-bottom: 0;
 }
+
+.star-rating-5::after {
+  content: '\2605\2605\2605\2605\2605';
+}
+
+.star-rating-4::after {
+  content: '\2605\2605\2605\2605\2606';
+}
+
+.star-rating-3::after {
+  content: '\2605\2605\2605\2606\2606';
+}
+
+.star-rating-2::after {
+  content: '\2605\2606\2606\2606\2606';
+}
+
+.star-rating-1::after {
+  content: '\2606\2606\2606\2606\2606';
+}
