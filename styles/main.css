@@ -71,6 +71,14 @@ table {
   width: 100%;
 }
 
+td {
+  vertical-align: top;
+}
+
+.col-2 {
+  margin: 0 1em 0 0.3em;
+}
+
 .teWhareTapaWha td {
   text-align: center;
   table-layout: fixed;
@@ -203,6 +211,34 @@ a:hover {
 
 .header-logo a:hover {
   color: var(--cyan);
+}
+
+.star-rating-5::after {
+  content: '\000A\2605\2605\2605\2605\2605';
+}
+
+.star-rating-4::after {
+  content: '\000A\2605\2605\2605\2605\2606';
+}
+
+.star-rating-3::after {
+  content: '\000A\2605\2605\2605\2606\2606';
+}
+
+.star-rating-2::after {
+  content: '\000A\2605\2605\2606\2606\2606';
+}
+
+.star-rating-1::after {
+  content: '\000A\2605\2606\2606\2606\2606';
+}
+
+.star-rating-1,
+.star-rating-2,
+.star-rating-3,
+.star-rating-4,
+.star-rating-5 {
+  padding: 0 1.5em 1em 0;
 }
 
 @media (max-width: 580px) {
