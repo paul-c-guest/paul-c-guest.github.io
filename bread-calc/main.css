@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@700&display=swap');
 
 :root {
   --min-button-width: 2.25em;
@@ -12,11 +12,13 @@ body {
 }
 
 h1 {
+  font-weight: normal;
   font-family: 'Montagu Slab', sans-serif;
   font-size: 3.1em;
 }
 
 h2 {
+  font-weight: normal;
   font-family: 'Montagu Slab', sans-serif;
   font-size: 2em;
 }
