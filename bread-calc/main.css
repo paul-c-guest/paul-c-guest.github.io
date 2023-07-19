@@ -26,8 +26,9 @@ input {
 
 button {
   padding: 0.5em;
-  margin: 1em;
+  margin: 0.5em;
   font-size: 100%;
+  min-width: 2.25em;
 }
 
 .flour-entry-name {

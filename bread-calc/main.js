@@ -21,9 +21,14 @@ const addFlour = () => {
   hydrationInput.setAttribute('value', 65)
   hydrationInput.setAttribute('min', 1)
 
+  const deleteButton = document.createElement('button')
+  deleteButton.innerHTML = 'X'
+  deleteButton.onclick = () => flourBlock.removeChild(newLine)
+
   newLine.appendChild(flourInput)
   newLine.appendChild(amountInput)
   newLine.appendChild(hydrationInput)
+  newLine.appendChild(deleteButton)
 
   flourBlock.appendChild(newLine)
 }
