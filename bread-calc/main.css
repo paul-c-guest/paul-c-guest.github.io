@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap');
+
 :root {
   --min-button-width: 2.25em;
   font-family: sans-serif;
@@ -7,6 +9,11 @@
 body {
   margin: 2em 2em;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Montagu Slab', sans-serif;
+  font-size: 3em;
 }
 
 table {
@@ -42,8 +49,4 @@ button {
 
 .flour-delete-button {
   min-width: var(--min-button-width);
-}
-
-.table-head-delete-button {
-  /* min-width: calc(var(--min-button-width) - 1em); */
 }
