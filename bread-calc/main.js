@@ -51,6 +51,12 @@ const addFlour = () => {
   amountInput.setAttribute('step', 5)
   amountInput.setAttribute('value', 100)
   amountInput.onchange = updateTotals
+  amountInput.onwheel = (e) => {
+    e.preventDefault()
+    const val = parseInt(amountInput.value)
+    amountInput.setAttribute('value', e.deltaY < 0 ? val + 5 : val - 5)
+    updateTotals()
+  }
 
   const hydrationInput = document.createElement('input')
   hydrationInput.classList.add('flour-entry-number')
@@ -59,6 +65,12 @@ const addFlour = () => {
   hydrationInput.setAttribute('value', 65)
   hydrationInput.setAttribute('min', 1)
   hydrationInput.onchange = updateTotals
+  hydrationInput.onwheel = (e) => {
+    e.preventDefault()
+    const val = parseInt(hydrationInput.value)
+    hydrationInput.setAttribute('value', e.deltaY < 0 ? val + 1 : val - 1)
+    updateTotals()
+  }
 
   const deleteButton = document.createElement('button')
   deleteButton.classList.add('flour-delete-button')
