@@ -16,6 +16,11 @@ h1 {
   font-size: 3.1em;
 }
 
+h2 {
+  font-family: 'Montagu Slab', sans-serif;
+  font-size: 2em;
+}
+
 table {
   margin: 0 auto;
 }
