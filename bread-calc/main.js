@@ -2,6 +2,7 @@ const flourBlock = document.getElementById('flour-block')
 
 const dryTotal = document.getElementById('dry-total')
 const wetTotal = document.getElementById('wet-total')
+const hydrationTotal = document.getElementById('hydration-total')
 const doughTotal = document.getElementById('dough-total')
 
 const updateTotals = () => {
@@ -29,6 +30,9 @@ const updateTotals = () => {
   dryTotal.innerHTML = dry + 'g'
   wetTotal.innerHTML = wet + 'ml'
 
+  let hydration = Math.round((wet / dry) * 100)
+  hydrationTotal.innerHTML = hydration + '%'
+
   doughTotal.innerHTML = dry + wet + 'g'
 }
 
@@ -37,7 +41,7 @@ const addFlour = () => {
 
   const flourInput = document.createElement('input')
   flourInput.classList.add('flour-entry-name')
-  flourInput.setAttribute('placeholder', 'wholemeal')
+  flourInput.setAttribute('placeholder', 'wheat, rye, spelt...')
 
   const amountInput = document.createElement('input')
   amountInput.classList.add('flour-entry-number')
