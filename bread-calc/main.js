@@ -14,25 +14,11 @@ const addFlour = () => {
 
   const hydrationInput = document.createElement('input')
   hydrationInput.classList.add('flour-entry-number')
-  hydrationInput.setAttribute('placeholder', 'wet%')
+  hydrationInput.setAttribute('placeholder', '%')
   hydrationInput.setAttribute('type', 'number')
 
-  const flourTitle = document.createElement('span')
-  flourTitle.innerHTML = 'Flour:'
-
-  const amountTitle = document.createElement('span')
-  amountTitle.innerHTML = 'Amount:'
-
-  const hydrationTitle = document.createElement('span')
-  hydrationTitle.innerHTML = 'Hydration:'
-
-  newLine.appendChild(flourTitle)
   newLine.appendChild(flourInput)
-
-  newLine.appendChild(amountTitle)
   newLine.appendChild(amountInput)
-
-  newLine.appendChild(hydrationTitle)
   newLine.appendChild(hydrationInput)
 
   flourBlock.appendChild(newLine)
