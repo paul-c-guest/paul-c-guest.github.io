@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400&display=swap');
 
 :root {
   --min-button-width: 2.25em;
@@ -13,17 +13,24 @@ body {
 
 h1 {
   font-family: 'Montagu Slab', sans-serif;
-  font-size: 3em;
+  font-size: 3.1em;
 }
 
 table {
   margin: 0 auto;
+}
+
+.table-headings {
   font-weight: bold;
 }
 
 td {
   text-align: start;
   padding: 0.5em 1em;
+}
+
+.center {
+  text-align: center;
 }
 
 input {
@@ -38,6 +45,12 @@ button {
   font-size: 100%;
 }
 
+hr {
+  width: 24em;
+  border-color: #0000;
+  background-color: black;
+}
+
 .flour-entry-name {
   width: 9em;
 }
@@ -49,4 +62,12 @@ button {
 
 .flour-delete-button {
   min-width: var(--min-button-width);
+}
+
+.sub-total {
+  font-size: 2em;
+}
+
+.total {
+  font-size: 2.6em;
 }

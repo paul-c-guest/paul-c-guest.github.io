@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="main.css" />
@@ -10,7 +9,7 @@
 
   <body>
     <h1>Good Leavening</h1>
-    <table>
+    <table class="table-headings">
       <tr>
         <td class="flour-entry-name">Flour</td>
         <td class="flour-entry-number">Amount</td>
@@ -20,7 +19,29 @@
     </table>
     <div id="flour-block"></div>
     <button id="newline">new flour</button>
+
+    <hr />
+    <h2>Totals</h2>
+    <table>
+      <tr class="table-headings">
+        <td class="center">Dry</td>
+        <td class="center">Wet</td>
+      </tr>
+      <tr>
+        <td class="sub-total" id="dry-total">###</td>
+        <td class="sub-total" id="wet-total">###</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="table-headings">
+        <td class="center">Total Weight</td>
+      </tr>
+      <tr>
+        <td class="total" id="dough-total">###</td>
+      </tr>
+    </table>
+
     <script src="main.js" type="module"></script>
   </body>
-
 </html>
