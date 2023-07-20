@@ -1,3 +1,5 @@
+const NAN_STRING = '~~'
+
 const flourBlock = document.getElementById('flour-block')
 
 const dryTotal = document.getElementById('dry-total')
@@ -24,16 +26,25 @@ const updateTotals = () => {
     wet += thisDry * thisWet * 0.01
   }
 
+  // remove unnecessary decimal information
   dry = Math.round(dry)
   wet = Math.round(wet)
 
-  dryTotal.innerHTML = dry + 'g'
-  wetTotal.innerHTML = wet + 'ml'
-
+  // get a value to use as a percentage
   let hydration = Math.round((wet / dry) * 100)
-  hydrationTotal.innerHTML = hydration + '%'
 
-  doughTotal.innerHTML = dry + wet + 'g'
+  // correct for any division by zero
+  if (isNaN(hydration)) {
+    hydration = 0
+  }
+
+  // determine if dry and wet are valid numbers
+  const valid = !isNaN(dry) && !isNaN(wet)
+
+  dryTotal.innerHTML = valid ? dry + 'g' : NAN_STRING
+  wetTotal.innerHTML = valid ? wet + 'ml' : NAN_STRING
+  hydrationTotal.innerHTML = valid ? hydration + '%' : NAN_STRING
+  doughTotal.innerHTML = valid ? dry + wet + 'g' : NAN_STRING
 }
 
 const addFlour = () => {
