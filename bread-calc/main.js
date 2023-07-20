@@ -69,7 +69,7 @@ const addFlour = () => {
   amountInput.classList.add('flour-entry-number')
   amountInput.setAttribute('placeholder', 'grams')
   amountInput.setAttribute('type', 'number')
-  amountInput.setAttribute('min', 0)
+  amountInput.setAttribute('min', FLOUR_STEP)
   amountInput.setAttribute('step', FLOUR_STEP)
   amountInput.setAttribute('value', 100)
   amountInput.onchange = updateTotals
@@ -80,6 +80,9 @@ const addFlour = () => {
       'value',
       e.deltaY < 0 ? val + FLOUR_STEP : val - FLOUR_STEP
     )
+    if (parseInt(amountInput.value) < FLOUR_STEP) {
+      amountInput.setAttribute('value', FLOUR_STEP)
+    }
     updateTotals()
   }
 
