@@ -35,7 +35,7 @@ table {
 
 td {
   text-align: start;
-  padding: 0.4em 1em;
+  padding: 0.4em 0.8em;
 }
 
 .center {
@@ -44,7 +44,7 @@ td {
 
 input {
   padding: 0.5em;
-  margin: 0.5em;
+  /* margin: 0.5em; */
   font-size: 100%;
 }
 
