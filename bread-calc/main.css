@@ -12,12 +12,14 @@ body {
 }
 
 h1 {
+  margin: 0.6em auto;
   font-weight: normal;
   font-family: 'Montagu Slab', sans-serif;
-  font-size: 3.1em;
+  font-size: 2.8em;
 }
 
 h2 {
+  margin: 0.5em auto;
   font-weight: normal;
   font-family: 'Montagu Slab', sans-serif;
   font-size: 2em;
@@ -33,7 +35,7 @@ table {
 
 td {
   text-align: start;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .center {
@@ -58,7 +60,8 @@ button {
 }
 
 hr {
-  width: 24em;
+  margin-top: 1em;
+  width: 25em;
   border-color: #0000;
   background-color: black;
 }
@@ -81,5 +84,6 @@ hr {
 }
 
 .total {
+  font-weight: 600;
   font-size: 2.6em;
 }

@@ -20,12 +20,14 @@ const updateTotals = () => {
     const hydrInputEl = flour.getElementsByClassName('flour-entry-number')[1]
 
     const thisDry = parseInt(amountInputEl.value)
-    const thisWet = parseInt(hydrInputEl.value)
+    const thisHydration = parseInt(hydrInputEl.value)
 
     dry += thisDry
-    wet += thisDry * thisWet * 0.01
 
-    // change input border color when input in invalid
+    // wet is a percentage of dry
+    wet += thisDry * thisHydration * 0.01
+
+    // visually highlight inputs when invalid
     amountInputEl.setAttribute(
       'style',
       thisDry ? 'background-color: none' : 'background-color: #f003'
@@ -33,7 +35,7 @@ const updateTotals = () => {
 
     hydrInputEl.setAttribute(
       'style',
-      thisWet ? 'background-color: none' : 'background-color: #f003'
+      thisHydration ? 'background-color: none' : 'background-color: #f003'
     )
   }
 
