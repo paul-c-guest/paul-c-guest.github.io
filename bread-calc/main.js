@@ -10,14 +10,20 @@ const hydrationTotal = document.getElementById('hydration-total')
 const doughTotal = document.getElementById('dough-total')
 
 const updateTotals = () => {
-  const flours = flourBlock.getElementsByTagName('div')
+  const flours = flourBlock.getElementsByTagName('tr')
 
   let dry = 0
   let wet = 0
 
   for (const flour of flours) {
-    const amountInputEl = flour.getElementsByClassName('flour-entry-number')[0]
-    const hydrInputEl = flour.getElementsByClassName('flour-entry-number')[1]
+    // skip row containing headings
+    if (flour.classList.contains('table-headings')) {
+      continue
+    }
+
+    // destructure first and second results
+    const [amountInputEl, hydrInputEl] =
+      flour.getElementsByClassName('flour-entry-number')
 
     const thisDry = parseInt(amountInputEl.value)
     const thisHydration = parseInt(hydrInputEl.value)
