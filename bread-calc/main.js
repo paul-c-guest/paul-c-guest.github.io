@@ -1,5 +1,6 @@
 const NAN_STRING = '~~'
 const FLOUR_STEP = 5
+const DEFAULT_HYDRATION = 70
 
 const flourBlock = document.getElementById('flour-block')
 
@@ -72,7 +73,7 @@ const addFlour = () => {
   amountInput.setAttribute('min', FLOUR_STEP)
   amountInput.setAttribute('step', FLOUR_STEP)
   amountInput.setAttribute('value', 100)
-  amountInput.onchange = updateTotals
+  amountInput.oninput = updateTotals
   amountInput.onwheel = (e) => {
     // e.preventDefault()
     const val = parseInt(amountInput.value)
@@ -90,9 +91,9 @@ const addFlour = () => {
   hydrationInput.classList.add('flour-entry-number')
   hydrationInput.setAttribute('placeholder', '%')
   hydrationInput.setAttribute('type', 'number')
-  hydrationInput.setAttribute('value', 65)
+  hydrationInput.setAttribute('value', DEFAULT_HYDRATION)
   hydrationInput.setAttribute('min', 1)
-  hydrationInput.onchange = updateTotals
+  hydrationInput.oninput = updateTotals
   hydrationInput.onwheel = (e) => {
     // e.preventDefault()
     const val = parseInt(hydrationInput.value)
