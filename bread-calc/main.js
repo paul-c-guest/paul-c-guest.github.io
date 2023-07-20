@@ -62,7 +62,7 @@ const updateTotals = () => {
 }
 
 const addFlour = () => {
-  const newLine = document.createElement('div')
+  const newLine = document.createElement('tr')
 
   const flourInput = document.createElement('input')
   flourInput.classList.add('flour-entry-name')
@@ -111,12 +111,18 @@ const addFlour = () => {
     updateTotals()
   }
 
-  newLine.appendChild(flourInput)
-  newLine.appendChild(amountInput)
-  newLine.appendChild(hydrationInput)
-  newLine.appendChild(deleteButton)
+  newLine.appendChild(getElementInTableCell(flourInput))
+  newLine.appendChild(getElementInTableCell(amountInput))
+  newLine.appendChild(getElementInTableCell(hydrationInput))
+  newLine.appendChild(getElementInTableCell(deleteButton))
 
   flourBlock.appendChild(newLine)
+}
+
+const getElementInTableCell = (el) => {
+  const cell = document.createElement('td')
+  cell.appendChild(el)
+  return cell
 }
 
 // create one initial line by default
