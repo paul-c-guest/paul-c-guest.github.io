@@ -1,4 +1,5 @@
 const NAN_STRING = '~~'
+const FLOUR_STEP = 5
 
 const flourBlock = document.getElementById('flour-block')
 
@@ -14,24 +15,33 @@ const updateTotals = () => {
   let wet = 0
 
   for (const flour of flours) {
-    const thisDry = Number.parseInt(
-      flour.getElementsByClassName('flour-entry-number')[0].value
-    )
+    const amountInputEl = flour.getElementsByClassName('flour-entry-number')[0]
+    const hydrInputEl = flour.getElementsByClassName('flour-entry-number')[1]
 
-    const thisWet = Number.parseInt(
-      flour.getElementsByClassName('flour-entry-number')[1].value
-    )
+    const thisDry = parseInt(amountInputEl.value)
+    const thisWet = parseInt(hydrInputEl.value)
 
     dry += thisDry
     wet += thisDry * thisWet * 0.01
+
+    // change input border color when input in invalid
+    amountInputEl.setAttribute(
+      'style',
+      thisDry ? 'background-color: none' : 'background-color: #f003'
+    )
+
+    hydrInputEl.setAttribute(
+      'style',
+      thisWet ? 'background-color: none' : 'background-color: #f003'
+    )
   }
 
-  // remove unnecessary decimal information
+  // calculate hydration before rounding wet & dry values
+  let hydration = Math.round((wet / dry) * 100)
+
+  // remove messy decimal information
   dry = Math.round(dry)
   wet = Math.round(wet)
-
-  // get a value to use as a percentage
-  let hydration = Math.round((wet / dry) * 100)
 
   // correct for any division by zero
   if (isNaN(hydration)) {
@@ -41,6 +51,7 @@ const updateTotals = () => {
   // determine if dry and wet are valid numbers
   const valid = !isNaN(dry) && !isNaN(wet)
 
+  // update the html elements
   dryTotal.innerHTML = valid ? dry + 'g' : NAN_STRING
   wetTotal.innerHTML = valid ? wet + 'ml' : NAN_STRING
   hydrationTotal.innerHTML = valid ? hydration + '%' : NAN_STRING
@@ -59,13 +70,16 @@ const addFlour = () => {
   amountInput.setAttribute('placeholder', 'grams')
   amountInput.setAttribute('type', 'number')
   amountInput.setAttribute('min', 0)
-  amountInput.setAttribute('step', 5)
+  amountInput.setAttribute('step', FLOUR_STEP)
   amountInput.setAttribute('value', 100)
   amountInput.onchange = updateTotals
   amountInput.onwheel = (e) => {
     // e.preventDefault()
     const val = parseInt(amountInput.value)
-    amountInput.setAttribute('value', e.deltaY < 0 ? val + 5 : val - 5)
+    amountInput.setAttribute(
+      'value',
+      e.deltaY < 0 ? val + FLOUR_STEP : val - FLOUR_STEP
+    )
     updateTotals()
   }
 

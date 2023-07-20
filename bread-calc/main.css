@@ -46,6 +46,11 @@ input {
   font-size: 100%;
 }
 
+input:active,
+input:focus-visible {
+  outline: 1pt;
+}
+
 button {
   padding: 0.5em;
   margin: 0.5em;
