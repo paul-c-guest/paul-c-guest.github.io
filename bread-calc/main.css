@@ -117,8 +117,9 @@ hr {
     font-size: 7.5vw;
     padding: 0 3vw 3vw;
   }
-.total {
-  font-size: 9vw;
-  padding: 0vw;
-}
+
+  .total {
+    font-size: 9vw;
+    padding: 0vw;
+  }
 }
