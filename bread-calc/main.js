@@ -114,7 +114,7 @@ const addFlour = () => {
   deleteButton.classList.add('flour-delete-button')
   deleteButton.innerHTML = 'X'
   deleteButton.onclick = () => {
-    flourBlock.removeChild(newLine)
+    flourBlock.children[0].removeChild(newLine)
     updateTotals()
   }
 
