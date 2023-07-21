@@ -9,7 +9,7 @@
 body {
   margin: 2em 2em;
   text-align: center;
-}  
+}
 
 h1 {
   margin: 0.6em auto;
@@ -35,14 +35,15 @@ table {
 
 td {
   text-align: start;
-  padding: 0.5em 0.5em;
+  padding: 0.5em;
 }
 
 .center {
   text-align: center;
 }
 
-input {
+input,
+button {
   padding: 0.5em;
   font-size: 100%;
 }
@@ -50,11 +51,6 @@ input {
 input:active,
 input:focus-visible {
   outline: 1pt;
-}
-
-button {
-  padding: 0.5em;
-  font-size: 100%;
 }
 
 hr {
@@ -84,4 +80,45 @@ hr {
 .total {
   font-weight: 600;
   font-size: 2.6em;
+}
+
+@media (max-width: 660px) {
+  body {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 8.4vw;
+  }
+
+  h2 {
+    font-size: 5.3vw;
+  }
+
+  hr {
+    width: 84vw;
+  }
+
+  input,
+  button {
+    /* padding: 0.9vw; */
+    font-size: 3.5vw;
+  }
+
+  td {
+    padding: 1vw;
+  }
+
+  .table-headings {
+    font-size: 3.4vw;
+  }
+
+  .sub-total {
+    font-size: 7.5vw;
+    padding: 0 3vw 3vw;
+  }
+.total {
+  font-size: 9vw;
+  padding: 0vw;
+}
 }
