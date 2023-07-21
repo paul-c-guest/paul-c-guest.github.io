@@ -16,7 +16,7 @@ const updateTotals = () => {
   let wet = 0
 
   for (const flour of flours) {
-    // skip non-flour rows 
+    // skip other rows e.g. headings and button
     if (!flour.classList.contains('flour-row')) {
       continue
     }
@@ -123,7 +123,11 @@ const addFlour = () => {
   newLine.appendChild(getElementInTableCell(hydrationInput))
   newLine.appendChild(getElementInTableCell(deleteButton))
 
-  flourBlock.appendChild(newLine)
+  // insert newline at second to last position in flour block
+  const position = flourBlock.children[0].children.length - 1
+  const buttonRow = flourBlock.children[0].children[position]
+
+  flourBlock.children[0].insertBefore(newLine, buttonRow)
 }
 
 const getElementInTableCell = (el) => {
