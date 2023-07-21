@@ -106,6 +106,7 @@ hr {
   button {
     /* padding: 0.9vw; */
     font-size: 3.5vw;
+    min-height: 4vw;
   }
 
   td {
@@ -127,7 +128,8 @@ hr {
   }
 
   .flour-delete-button {
-    min-height: auto;
-font-size: 6.4vw;
+    font-size: 5vw;
+    min-height: 8vw;
+    /* todo: try get correct sizing on mobile */
   }
 }
