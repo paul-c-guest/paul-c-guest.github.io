@@ -9,7 +9,7 @@
 body {
   margin: 2em 2em;
   text-align: center;
-}
+}  
 
 h1 {
   margin: 0.6em auto;
@@ -44,7 +44,6 @@ td {
 
 input {
   padding: 0.5em;
-  /* margin: 0.5em; */
   font-size: 100%;
 }
 
@@ -55,7 +54,6 @@ input:focus-visible {
 
 button {
   padding: 0.5em;
-  /* margin: 0.5em; */
   font-size: 100%;
 }
 

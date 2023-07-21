@@ -20,8 +20,21 @@
         <td>Hydration</td>
         <td></td>
       </tr>
+      <tr>
+        <td>
+          <input type="button" id="newline-button" value="new flour..." />
+        </td>
+      </tr>
     </table>
-    <button id="newline">new flour</button>
+    
+    <table>
+      <tr>
+        <td class="flour-entry-name"></td>
+        <td class="flour-entry-number"></td>
+        <td class="flour-entry-number"></td>
+        <td class="flour-delete-button"></td>
+      </tr>
+    </table>
 
     <hr />
 
@@ -34,13 +47,28 @@
       </tr>
       <tr>
         <td>
-          <input type="text" class="flour-entry-name" id="starter-flour-name" />
+          <input
+            type="text"
+            class="flour-entry-name"
+            id="starter-flour-name"
+            placeholder="wheat, rye, spelt..."
+          />
         </td>
         <td>
-          <input type="number" class="flour-entry-number" id="starter-dry" />
+          <input
+            type="number"
+            class="flour-entry-number"
+            id="starter-dry"
+            value="80"
+          />
         </td>
         <td>
-          <input type="number" class="flour-entry-number" id="starter-wet" />
+          <input
+            type="number"
+            class="flour-entry-number"
+            id="starter-wet"
+            value="80"
+          />
         </td>
       </tr>
     </table>

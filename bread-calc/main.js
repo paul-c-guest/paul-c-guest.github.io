@@ -16,8 +16,8 @@ const updateTotals = () => {
   let wet = 0
 
   for (const flour of flours) {
-    // skip row containing headings
-    if (flour.classList.contains('table-headings')) {
+    // skip non-flour rows 
+    if (!flour.classList.contains('flour-row')) {
       continue
     }
 
@@ -69,6 +69,7 @@ const updateTotals = () => {
 
 const addFlour = () => {
   const newLine = document.createElement('tr')
+  newLine.classList.add('flour-row')
 
   const flourInput = document.createElement('input')
   flourInput.classList.add('flour-entry-name')
@@ -135,7 +136,7 @@ const getElementInTableCell = (el) => {
 addFlour()
 updateTotals()
 
-document.getElementById('newline').onclick = (e) => {
+document.getElementById('newline-button').onclick = (e) => {
   addFlour()
   updateTotals()
 }
