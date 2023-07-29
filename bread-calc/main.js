@@ -4,6 +4,9 @@ const DEFAULT_HYDRATION = 70
 
 const flourBlock = document.getElementById('flour-block')
 
+const starterDryAmount = document.getElementById('starter-dry')
+const starterWetAmount = document.getElementById('starter-wet')
+
 const dryTotal = document.getElementById('dry-total')
 const wetTotal = document.getElementById('wet-total')
 const hydrationTotal = document.getElementById('hydration-total')
@@ -44,6 +47,11 @@ const updateTotals = () => {
       thisHydration ? 'background-color: none' : 'background-color: #f003'
     )
   }
+
+  // add values from starter
+  // starter-dry/wet
+  dry += parseInt(starterDryAmount.value)
+  wet += parseInt(starterWetAmount.value)
 
   // calculate hydration before rounding wet & dry values
   let hydration = Math.round((wet / dry) * 100)
@@ -139,6 +147,44 @@ const getElementInTableCell = (el) => {
 // create one initial line by default
 addFlour()
 updateTotals()
+
+starterDryAmount.setAttribute('placeholder', 'grams')
+starterDryAmount.setAttribute('type', 'number')
+starterDryAmount.setAttribute('min', FLOUR_STEP)
+starterDryAmount.setAttribute('step', FLOUR_STEP)
+starterDryAmount.setAttribute('value', 100)
+starterDryAmount.oninput = updateTotals
+starterDryAmount.onwheel = (e) => {
+  // e.preventDefault()
+  const val = parseInt(starterDryAmount.value)
+  starterDryAmount.setAttribute(
+    'value',
+    e.deltaY < 0 ? val + FLOUR_STEP : val - FLOUR_STEP
+  )
+  if (parseInt(starterDryAmount.value) < FLOUR_STEP) {
+    starterDryAmount.setAttribute('value', FLOUR_STEP)
+  }
+  updateTotals()
+}
+
+starterWetAmount.setAttribute('placeholder', 'grams')
+starterWetAmount.setAttribute('type', 'number')
+starterWetAmount.setAttribute('min', FLOUR_STEP)
+starterWetAmount.setAttribute('step', FLOUR_STEP)
+starterWetAmount.setAttribute('value', 100)
+starterWetAmount.oninput = updateTotals
+starterWetAmount.onwheel = (e) => {
+  // e.preventDefault()
+  const val = parseInt(starterWetAmount.value)
+  starterWetAmount.setAttribute(
+    'value',
+    e.deltaY < 0 ? val + FLOUR_STEP : val - FLOUR_STEP
+  )
+  if (parseInt(starterWetAmount.value) < FLOUR_STEP) {
+    starterWetAmount.setAttribute('value', FLOUR_STEP)
+  }
+  updateTotals()
+}
 
 document.getElementById('newline-button').onclick = (e) => {
   addFlour()
