@@ -1,3 +1,5 @@
+import testFlourDatabase from './flours.js'
+
 const NAN_STRING = '~~'
 const FLOUR_STEP = 5
 const DEFAULT_HYDRATION = 70
@@ -186,7 +188,20 @@ starterWetAmount.onwheel = (e) => {
   updateTotals()
 }
 
-document.getElementById('newline-button').onclick = (e) => {
-  addFlour()
-  updateTotals()
+const newFlourButton = document.getElementById('newline-button')
+
+// newFlourButton.onclick = (e) => {
+//   addFlour()
+//   updateTotals()
+// }
+
+const dropdown = document.getElementById('new-flour-dropdown')
+
+for (const flour of testFlourDatabase) {
+  const listItem = document.createElement('li')
+  const link = document.createElement('a')
+  link.href = '#'
+  link.innerHTML = flour.name
+  listItem.appendChild(link)
+  dropdown.appendChild(listItem)
 }

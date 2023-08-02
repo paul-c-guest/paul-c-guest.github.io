@@ -1,4 +1,4 @@
-export const flours = [
+export default [
   { name: 'Wheat - High Grade', defHydration: 73 },
   { name: 'Wheat - Regular', defHydration: 68 },
   { name: 'Wheat - Wholemeal', defHydration: 65 },

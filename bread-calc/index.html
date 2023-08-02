@@ -21,12 +21,20 @@
         <td></td>
       </tr>
       <tr id="flour-block-button-row">
-        <td>
+        <!-- <td> 
           <input type="button" id="newline-button" value="new flour..." />
+        </td> -->
+        <td>
+          <ul class="dropdown" id="new-flour-dropdown">
+            <li>
+              <a href="#">new flour...</a>
+              <!-- <input type="button" id="newline-button" value="new flour..." /> -->
+            </li>
+          </ul>
         </td>
       </tr>
     </table>
-    
+
     <hr />
 
     <h2>My Starter</h2>
@@ -46,18 +54,10 @@
           />
         </td>
         <td>
-          <input
-            type="number"
-            class="flour-entry-number"
-            id="starter-dry"
-          />
+          <input type="number" class="flour-entry-number" id="starter-dry" />
         </td>
         <td>
-          <input
-            type="number"
-            class="flour-entry-number"
-            id="starter-wet"
-          />
+          <input type="number" class="flour-entry-number" id="starter-wet" />
         </td>
       </tr>
     </table>
